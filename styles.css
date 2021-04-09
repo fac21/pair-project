@@ -1,0 +1,92 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "speaker levers levers brand-name"
+      "keyboard keyboard keyboard keyboard";
+  }
+  
+  .speaker { grid-area: speaker; }
+  
+  .levers { grid-area: levers; }
+  
+  .brand-name { grid-area: brand-name; }
+  
+  .keyboard { 
+      grid-area: keyboard; 
+      display: flex;
+      width: 100%;
+  }
+  .grid-container {
+    background: gray;
+  }
+  .white-key {
+    max-width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: white;
+    border: 10px solid gray;
+    border-radius: 8px;
+    flex: 1;
+    height: 100%;
+    color: gray;
+    padding: 10px;
+  }
+  .black-key {
+    max-width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    z-index: 2;
+    height: 70%;
+    background-color: black;
+    width: 10%;
+    margin: 0 -5%;
+    border-radius: 5px;
+    color: gray;
+    padding: 10px;
+  }
+  .speaker-img {
+      width: 100%;
+  }
+  .levers {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 2rem;
+  }
+  .switch {
+    transform: rotate(90deg);
+    position: relative;
+    width: 58px;
+    height: 2rem;
+    cursor: pointer;
+    margin: 1.5%;
+    background-color: red;
+    border-radius: 2rem;
+    z-index: 3;
+  }
+  .switch input {
+    opacity: 0;
+  }
+  .slider {
+    position: absolute;
+    height: 1.5rem;
+    width: 1.5rem;
+    right: 0.25rem;
+    bottom: 0.25rem;
+    border-radius: 50%;
+    background-color: rgb(219, 255, 153);
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+  }
+  input:checked + .slider {
+    background-color: #f0e4e0;
+    -webkit-transform: translateX(-1.6rem);
+    -ms-transform: translateX(-1.6rem);
+    transform: translateX(-1.6rem);
+  }
+  
