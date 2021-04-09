@@ -34,7 +34,7 @@ window.addEventListener('keydown', function(e) {
     setInterval(function(){
       if (audio.currentTime > 1) {
           audio.pause();
-          key.style.backgroundColor = "white"
+          // key.style.backgroundColor = "white"
 
          
           
