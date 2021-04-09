@@ -8,22 +8,41 @@
       "keyboard keyboard keyboard keyboard";
   }
   
+  body {
+    font-family: "EuroStyle";
+  }
+
+  .brand-name {
+    font-size: 5rem;
+    font-weight: bold;
+  }
+
   .speaker { grid-area: speaker; }
   
   .levers { grid-area: levers; }
   
   .brand-name { grid-area: brand-name; }
-  
-  .keyboard { 
-      grid-area: keyboard; 
+
+  .keys-container { 
       display: flex;
       width: 100%;
+      height: 200%;
+      justify-content: center;
   }
+
+.keyboard {
+  grid-area: keyboard; 
+  height: 100%;
+  padding-top: 10px;
+}
+
   .grid-container {
     background: gray;
+    padding-bottom: 110px;
+    max-width: 800px;
   }
   .white-key {
-    max-width: 3rem;
+    /* max-width: 3rem; */
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -35,8 +54,13 @@
     color: gray;
     padding: 10px;
   }
+
+  .second-colour {
+    background-color: red;
+  }
+
   .black-key {
-    max-width: 3rem;
+    /* max-width: 3rem; */
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -44,7 +68,7 @@
     z-index: 2;
     height: 70%;
     background-color: black;
-    width: 10%;
+    width: 7%;
     margin: 0 -5%;
     border-radius: 5px;
     color: gray;
@@ -62,10 +86,10 @@
     transform: rotate(90deg);
     position: relative;
     width: 58px;
-    height: 2rem;
+    height: 1rem;
     cursor: pointer;
     margin: 1.5%;
-    background-color: red;
+    background-color:white;
     border-radius: 2rem;
     z-index: 3;
   }
@@ -74,17 +98,17 @@
   }
   .slider {
     position: absolute;
-    height: 1.5rem;
+    height: 2.5rem;
     width: 1.5rem;
     right: 0.25rem;
-    bottom: 0.25rem;
-    border-radius: 50%;
-    background-color: rgb(219, 255, 153);
+    bottom: -0.75rem;
+    border-radius: 20%;
+    background-color: rgb(39, 44, 30);
     transition: 0.4s;
     -webkit-transition: 0.4s;
   }
   input:checked + .slider {
-    background-color: #f0e4e0;
+    background-color: #754737;
     -webkit-transform: translateX(-1.6rem);
     -ms-transform: translateX(-1.6rem);
     transform: translateX(-1.6rem);
